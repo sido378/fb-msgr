@@ -1,0 +1,30 @@
+{
+  "name": "fb-messenger",
+  "version": "0.0.1",
+  "description": "Node Library for the Facebook Messenger Plattform",
+  "repository": "https://github.com/sido378/fb-messenger.git",
+  "author": "Silvio Doblhofer",
+  "license": "Apache-2.0",
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "node-fetch": "^1.6.3",
+    "query-string": "^4.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.1",
+    "eslint-plugin-prettier": "^2.0.1",
+    "husky": "^0.13.3",
+    "lint-staged": "^3.4.0",
+    "prettier": "^0.22.0"
+  }
+}

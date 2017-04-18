@@ -1,0 +1,20 @@
+{
+  "name": "@fb-messenger/webhook-express-helper",
+  "version": "0.0.1",
+  "description": "Offers helper functions to integrate a webhook API to handle Facebook Messenger Plattform Requests via Express",
+  "main": "src/webhook-express-helper.js",
+  "repository": "https://github.com/sido378/fb-messenger.git",
+  "author": "Silvio Doblhofer",
+  "license": "Apache-2.0",
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "gitDir": "../../",
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
