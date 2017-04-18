@@ -75,7 +75,6 @@ class WebhookHelperExpress {
         });
       });
     }
-    handleE(req.body);
   }
 }
 
