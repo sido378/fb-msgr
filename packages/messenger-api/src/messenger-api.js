@@ -5,7 +5,7 @@ const BASE_URL = 'https://graph.facebook.com';
 const API_VERSION = 'v2.8';
 
 const getAPI = (endpoint, queryParams) => {
-  if (!queryParams.accessToken) {
+  if (!queryParams.access_token) {
     return Promise.reject({error: 'Missing page access token'});
   }
   return fetch(
@@ -26,7 +26,7 @@ const getAPI = (endpoint, queryParams) => {
 };
 
 const postAPI = (endpoint, body, queryParams) => {
-  if (!queryParams.accessToken) {
+  if (!queryParams.access_token) {
     return Promise.reject({error: 'Missing page access token'});
   }
   return fetch(
@@ -49,7 +49,7 @@ const postAPI = (endpoint, body, queryParams) => {
 };
 
 const deleteAPI = (endpoint, body, queryParams) => {
-  if (!queryParams.accessToken) {
+  if (!queryParams.access_token) {
     return Promise.reject({error: 'Missing page access token'});
   }
   return fetch(
