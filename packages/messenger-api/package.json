@@ -16,5 +16,9 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "dependencies": {
+    "node-fetch": "^1.6.3",
+    "query-string": "^4.3.2"
   }
 }
