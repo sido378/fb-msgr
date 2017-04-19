@@ -14,6 +14,10 @@ class WebhookHelperExpress {
   constructor(appSecret, verifyToken) {
     this.appSecret = appSecret;
     this.verifyToken = verifyToken;
+
+    this.verifyWebhookSetup = this.verifyWebhookSetup.bind(this);
+    this.verifyWebhookRequest = this.verifyWebhookRequest.bind(this);
+    this.handleWebhookEvent = this.handleWebhookEvent.bind(this);
   }
 
   /**

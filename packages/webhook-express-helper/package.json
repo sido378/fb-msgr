@@ -1,6 +1,6 @@
 {
   "name": "@fb-msgr/webhook-express-helper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Offers helper functions to integrate a webhook API to handle Facebook Messenger Plattform Requests via Express",
   "main": "src/webhook-express-helper.js",
   "repository": "https://github.com/sido378/fb-msgr.git",
