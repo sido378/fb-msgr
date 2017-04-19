@@ -25,7 +25,7 @@ class WebhookHelperExpress {
    */
   verifyWebhookSetup(req, res, verifyToken) {
     if (
-      req.query['hub.verify_token'] === (verifyToken || this.verify_token) &&
+      req.query['hub.verify_token'] === (verifyToken || this.verifyToken) &&
       req.query['hub.mode'] === 'subscribe'
     ) {
       res.status(200).send(req.query['hub.challenge']);
