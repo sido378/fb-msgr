@@ -3,7 +3,7 @@ module.exports = {
     return messagingEvent.message !== undefined &&
       !messagingEvent.message.is_echo &&
       !messagingEvent.message.quick_reply &&
-      !messagingEvent.message.attachment &&
+      !messagingEvent.message.attachments &&
       messagingEvent.message.text;
   },
   isQuickReply: messagingEvent => {
@@ -12,7 +12,7 @@ module.exports = {
   },
   isAttachment: messagingEvent => {
     return messagingEvent.message !== undefined &&
-      messagingEvent.message.attachment;
+      messagingEvent.message.attachments;
   },
   isEcho: messagingEvent => {
     return messagingEvent.message !== undefined &&
