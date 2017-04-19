@@ -68,9 +68,9 @@ class WebhookHelperExpress {
    */
   handleWebhookEvent(req, res, messageEventHandler) {
     res.sendStatus(200);
-    if (req.body) {
-      req.body.entry.each(entry => {
-        entry.messaging.each(messagingEvent => {
+    if (req.body.entry) {
+      req.body.entry.forEach(entry => {
+        entry.messaging.forEach(messagingEvent => {
           messageEventHandler(messagingEvent);
         });
       });
