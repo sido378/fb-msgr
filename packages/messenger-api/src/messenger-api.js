@@ -187,7 +187,7 @@ class MessengerApi {
     return getAPI('me/messenger_profile', {
       fields: opts.fields ||
         'persistent_menu,get_started,greeting,whitelisted_domains,' +
-          'account_linking_url,payment_settings,target_audience',
+          'account_linking_url,payment_settings,target_audience,home_url',
       access_token: opts.accessToken || this.accessToken,
     });
   }
@@ -213,6 +213,7 @@ class MessengerApi {
           'account_linking_url',
           'payment_settings',
           'target_audience',
+          'home_url',
         ],
       },
       {
