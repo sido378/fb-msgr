@@ -1,4 +1,4 @@
-const messageTemplate = (message, opts) => {
+const messageTemplate = (message, opts = {}) => {
   return Object.assign(message, {
     quick_replies: opts.quickReplies,
     metadata: opts.metadata,
@@ -40,7 +40,7 @@ module.exports = {
       opts
     );
   },
-  listTemplate: (elements, opts) => {
+  listTemplate: (elements, opts = {}) => {
     return attachmentMessage(
       'template',
       {
