@@ -146,6 +146,8 @@ class MessengerApi {
    * see https://developers.facebook.com/docs/messenger-platform/user-profile
    * @param {string} id        - Page scoped user id
    * @param {Object} [opts={}] - Object that might contain:
+   *                               fields      - String of comma-separated
+   *                                             fields to fetch
    *                               accessToken - Specify the sending page
    *
    * @return {Promise} Resolves to user profile json
@@ -153,7 +155,8 @@ class MessengerApi {
   getUserProfile(id, opts = {}) {
     return getAPI(id, {
       access_token: opts.accessToken || this.accessToken,
-      fields: 'first_name,last_name,profile_pic,locale,timezone,gender,' +
+      fields: opts.fields ||
+        'first_name,last_name,profile_pic,locale,timezone,gender,' +
         'is_payment_enabled,last_ad_referral',
     });
   }
@@ -177,7 +180,7 @@ class MessengerApi {
    * Fetches the messenger profile
    * see https://developers.facebook.com/docs/messenger-platform/messenger-profile
    * @param {Object} [opts={}] - Object that might contain:
-   *                               fields      - String of comma-seperated
+   *                               fields      - String of comma-separated
    *                                             fields to fetch
    *                               accessToken - Specify the sending page
    *
