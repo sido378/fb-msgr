@@ -57,7 +57,7 @@ class WebhookHelperExpress {
         .digest('hex');
 
       let received = req.headers['x-hub-signature'].split('sha1=')[1];
-      if (crypto.timingSafeEqual(new Buffer(received), new Buffer(expected))) {
+      if (!crypto.timingSafeEqual(new Buffer(received), new Buffer(expected))) {
         throw new Error('Failed verifying webhook request');
       }
     }
