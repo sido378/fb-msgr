@@ -1,6 +1,6 @@
 {
   "name": "@fb-msgr/messenger-api",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Offers wrapper functions for the Facebook Messenger Plattform API",
   "main": "src/messenger-api.js",
   "repository": "https://github.com/sido378/fb-msgr.git",

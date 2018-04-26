@@ -109,6 +109,7 @@ class MessengerApi {
         message: message,
         notification_type: opts.notificationType || 'REGULAR',
         tag: opts.tag,
+        message_type: opts.messageType || 'RESPONSE',
       },
       {
         access_token: opts.accessToken || this.accessToken,
