@@ -56,4 +56,13 @@ module.exports = {
   videoMessage: (url, opts) => attachmentMessage('video', {url}, opts),
   audioMessage: (url, opts) => attachmentMessage('audio', {url}, opts),
   fileMessage: (url, opts) => attachmentMessage('file', {url}, opts),
+  attachmentIdMessage: (type, id, opts) => {
+    return attachmentMessage(
+      type,
+      {
+        'attachment_id': id,
+      },
+      opts,
+    );
+  },
 };
